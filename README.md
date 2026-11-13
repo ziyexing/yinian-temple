@@ -6,6 +6,9 @@
 
 线上地址：<https://ziyexing.github.io/yinian-temple/>
 
+> 状态：仓库代码已就绪，但 GitHub Pages 尚未在仓库设置中开启，上述地址目前返回 404。
+> 开启方式：仓库 Settings → Pages → Build and deployment → Source 选 **GitHub Actions**（建议同时把 Settings → Actions → General → Workflow permissions 改为 **Read and write**）。开启后推送到 `main` 即自动构建发布。
+
 ## 五处地方
 
 | 位置 | 能做什么 |
@@ -15,6 +18,15 @@
 | 求签 | 摇签筒（签筒晃动 + 竹签弹出），二十四支签文与解语，可输入所问之事请师父现解 |
 | 木鱼 | 敲击计数（Web Audio 合成木鱼声）、功德印章、今日/连击/来访日数统计 |
 | 问禅 | 与「一念师父」对话；本地禅语模式内置六大类回应，接入模型后由模型现写 |
+
+## 另一页：金榜题名 · 考前祈愿空间
+
+面向上海升学家长的中高考考前祈福 H5，同样一页式、纯静态：点亮文昌灯（自动生成带名字的祈福语，可复制）、敲状元鼓（每敲一句减压话，30 声有劝停）、挂许愿牌（20 字内，在古树上竖成牌，可生成朋友圈海报）、考前静心三分钟（钟声 / 雨声 / 翻书三种合成音景 + 呼吸引导倒计时）。
+
+合规定位为「考前减压与传统文化体验」：全篇不提佛菩萨、不售法物符物开光物件、不作录取承诺；孩子名字、心愿与计数只存在本机 `localStorage`（键名 `jinbang.v1`）。
+
+- 已发布线上版：<https://vcnf4nw9vyy2.doubao.link/app/app_17hzgk1yhfx>
+- 仓库内路径：`jinbang/index.html`（Pages 开通后地址为 <https://ziyexing.github.io/yinian-temple/jinbang/>）——该文件目前只在本地产物目录，尚未随本仓库提交。
 
 ## 两种模式
 
@@ -55,6 +67,8 @@ python3 -m http.server 8000
 ## 部署
 
 仓库 Settings → Pages → Source 选 **GitHub Actions**；推送到 `main` 即自动构建发布（`.github/workflows/pages.yml` 里的 `configure-pages` 带 `enablement: true`，首次运行会尝试自动开启 Pages）。
+
+注意：工作流内的 token 无权自行创建 Pages 站点，若首次运行报 `Resource not accessible by integration`，说明 Pages 需要你在网页上手工开启一次，之后工作流才能正常部署。
 
 ## 说明
 
