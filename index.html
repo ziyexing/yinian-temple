@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>一念 · 线上AI寺庙</title>
+<meta name="description" content="一念 · 线上AI寺庙：点一炷香、求一支签、敲一记木鱼、与寺中师父说几句话。香火不熄，心事有解。">
+<link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@300;400;600;900&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230B0C0D'/%3E%3Crect x='7' y='7' width='50' height='50' rx='4' fill='none' stroke='%23A8382A' stroke-width='2'/%3E%3Ctext x='32' y='43' font-size='30' font-family='serif' fill='%23E7DFCE' text-anchor='middle'%3E念%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/OzrFbxHQmot3LoxkPwBcu3eJnvg" fetchpriority="high">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/sections.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vig" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="seal-mark" aria-hidden="true">念</span>
+    <span class="brand-name">一念</span>
+    <span class="brand-sub">线上 · AI 寺庙</span>
+  </div>
+  <div class="top-right">
+    <span class="shichen" id="shichen">亥时 · 寺门未关</span>
+    <button class="icon-btn" id="muteBtn" aria-label="静音" aria-pressed="false" role="switch">
+      <svg id="icoMute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 8.5c1.4 1.9 1.4 5.1 0 7" opacity=".9"/></svg>
+    </button>
+    <button class="icon-btn" id="setBtn" aria-label="设置 AI 接入">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M18 6l-1.6 1.6M7.6 16.4 6 18"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="rail" aria-label="殿宇索引">
+  <a href="#gate" class="on"><span class="dash"></span>山门</a>
+  <a href="#incense"><span class="dash"></span>敬香</a>
+  <a href="#qian"><span class="dash"></span>求签</a>
+  <a href="#muyu"><span class="dash"></span>木鱼</a>
+  <a href="#chan"><span class="dash"></span>问禅</a>
+</nav>
+<nav class="dock" aria-label="殿宇索引">
+  <a href="#gate" class="on">山门</a>
+  <a href="#incense">敬香</a>
+  <a href="#qian">求签</a>
+  <a href="#muyu">木鱼</a>
+  <a href="#chan">问禅</a>
+</nav>
+
+<main>
+<section class="gate" id="gate">
+  <div class="gate-media">
+    <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/OzrFbxHQmot3LoxkPwBcu3eJnvg" alt="夜色中的寺院山门，檐下两盏灯笼亮着暖光" fetchpriority="high">
+  </div>
+  <div class="gate-inner">
+    <div class="gate-flex">
+      <div class="gate-title-block">
+        <div class="gate-year">二〇二六 · 冬 · 香火长明</div>
+        <h1 class="gate-title">一念</h1>
+        <p class="gate-lede">夜半推门，无人应答。殿里只留一盏灯，一炉香，和一位听得懂人话的师父。你不必懂规矩，坐下就好。</p>
+        <div class="gate-cta">
+          <a class="btn btn-solid" href="#incense">上炷香</a>
+          <a class="btn btn-ghost" href="#qian">求一支签</a>
+        </div>
+      </div>
+      <div class="gate-side"><span>香火不熄</span><span>心事有解</span></div>
+    </div>
+    <div class="gate-meta">
+      <div><b id="m-incense">0</b><span>你敬过的香</span></div>
+      <div><b id="m-merit">0</b><span>你敲下的功德</span></div>
+      <div><b id="m-qian">0</b><span>你求过的签</span></div>
+    </div>
+  </div>
+</section>
+<!-- ===== 殿一：敬香 ===== -->
+<section class="sect sect-incense" id="incense">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <div class="kicker"><i></i>壹 · 敬香</div>
+      <h2>一炷心香，说给谁听都算说过了</h2>
+      <p class="lede">香不必贵，话不必整。把此刻最放不下的那件事写成一句，点着它，让它往上升。写下的字只留在这台设备的浏览器里，不会上云，也不会被人翻阅。</p>
+    </div>
+
+    <div class="two-col">
+      <figure class="media reveal" style="margin:0">
+        <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/ZgURbT2Ksowtt1xFrCecPcoTnAh" alt="石案上的铜香炉，三炷线香正在燃烧" loading="lazy">
+        <canvas id="smoke" aria-hidden="true"></canvas>
+        <div class="ash-hit" id="ashHit" role="button" tabindex="0" aria-label="点香"></div>
+        <span class="ash-tip" id="ashTip">轻点香炉，点着三炷香</span>
+        <figcaption class="media-cap">三炷清香一念虔敬</figcaption>
+      </figure>
+
+      <div class="reveal">
+        <div class="field">
+          <span class="label">写下这一句</span>
+          <textarea class="hair-input" id="wishInput" maxlength="26" rows="3" placeholder="愿母亲的膝盖少疼些，愿我今晚能睡着。"></textarea>
+          <div class="counter"><span id="wishCount">0</span> / 26</div>
+        </div>
+        <div class="incense-actions">
+          <button class="btn btn-solid" id="lightBtn">上香</button>
+          <button class="btn btn-quiet" id="clearWish">清空</button>
+          <span class="state-line" id="incenseState">香炉尚冷</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="wall-block reveal">
+      <div class="wall-head">
+        <span class="t">愿望墙</span>
+        <span class="c" id="wallCount">尚无人留下话</span>
+      </div>
+      <div class="wall" id="wall"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 殿二：求签 ===== -->
+<section class="sect sect-qian" id="qian">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <div class="kicker"><i></i>贰 · 求签</div>
+      <h2>摇一摇，问一句你现在最想问的事</h2>
+      <p class="lede">二十四支签，写的是古人的话，解的是今人的事。签文只给一个方向，路还是要你自己走——师父会把它译成你能用的一句话。</p>
+    </div>
+
+    <div class="qian-grid">
+      <div class="reveal">
+        <div class="tube-box" id="tubeBox">
+          <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/V2eEbc8PnoSI0axSJ7DcRijPnff" alt="木案上的竹签筒，系着一条旧红绸" loading="lazy">
+          <div class="stick-pop" id="stickPop" aria-hidden="true"><span id="stickNo">签</span></div>
+          <div class="tube-tap" id="tubeTap" role="button" tabindex="0" aria-label="摇签">
+            <span id="tubeTip">轻点签筒 · 摇一支</span>
+          </div>
+        </div>
+        <p class="sub-line" style="margin-top:12px">签不必多求，一事一签，心乱则签乱。</p>
+      </div>
+
+      <div class="panel reveal">
+        <div class="field" style="margin-bottom:20px">
+          <label class="label" for="askInput">所问何事（可留白）</label>
+          <input class="hair-input" id="askInput" maxlength="24" placeholder="比如：这份工作要不要接？">
+        </div>
+
+        <div id="qianResult">
+          <div class="panel-empty">
+            <div class="big">尚未落签</div>
+            <p style="margin:0">点左侧签筒，或按下方按钮摇一支。心里先放下一个问题，再摇，签才有着落。</p>
+          </div>
+        </div>
+
+        <div class="panel-foot">
+          <button class="btn btn-solid" id="shakeBtn">摇一支签</button>
+          <span class="sub-line" id="qianStatus">共二十四签 · 一事一签</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 殿三：木鱼 ===== -->
+<section class="sect sect-muyu" id="muyu">
+  <div class="wrap">
+    <div class="sect-head reveal">
+      <div class="kicker"><i></i>叁 · 木鱼</div>
+      <h2>敲它，不为求什么，只为听一声</h2>
+      <p class="lede">木鱼一下，功德一分——这是玩话。真实的是：手抬起来、落下去，那半秒钟心里没有别的念头。敲够了，你会自己停下来。</p>
+    </div>
+
+    <div class="muyu-grid">
+      <div class="muyu-stage reveal">
+        <button class="muyu-btn" id="muyuBtn" aria-label="敲击木鱼">
+          <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/DcrmbcSnOoqoHlxdDnnc1z53nMd" alt="深色木案上的紫檀木鱼与木槌" loading="lazy">
+        </button>
+        <span class="merit-float" id="meritFloat" aria-hidden="true">功德 +1</span>
+      </div>
+
+      <div class="merit-side reveal">
+        <div class="seal-box">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div class="num" id="meritNum">0</div>
+            <div style="font-family:var(--sans);font-size:11px;letter-spacing:.24em;opacity:.8">功德</div>
+          </div>
+          <div class="cap">一念寺 · 记</div>
+        </div>
+        <div class="stat-row">
+          <div><b id="meritToday">0</b><span>今日已敲</span></div>
+          <div><b id="meritBest">0</b><span>一口气最多</span></div>
+          <div><b id="meritDays">0</b><span>来过的日子</span></div>
+        </div>
+        <p class="tip">敲的时候别数数，数数就散了。若不小心开始数，也没关系——发现自己在数，就是回来了。</p>
+        <div>
+          <button class="btn btn-ghost" id="muyuReset">合上今天</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 殿四：问禅 ===== -->
+<section class="sect-chan" id="chan">
+  <div class="chan-bg" aria-hidden="true">
+    <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/HQEYbBc0eosYbsxcO3icx4XYnLb" alt="" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="chan-shell reveal">
+      <div class="sect-head">
+        <div class="kicker"><i></i>肆 · 问禅</div>
+        <h2>有话就说，师父在</h2>
+        <p class="lede">他不渡人，只陪你想清楚。说得乱也没关系，乱的话里往往藏着真话。</p>
+      </div>
+
+      <div class="chan-card">
+        <div class="chan-head">
+          <span class="chan-avatar" aria-hidden="true">禅</span>
+          <div class="chan-who">
+            <b>一念师父</b>
+            <span>寺中扫地僧 · 不管俗务，只管听</span>
+          </div>
+          <span class="mode-pill" id="modePill">本地禅语</span>
+        </div>
+
+        <div class="chat" id="chat" aria-live="polite"></div>
+
+        <div class="chips" id="chips">
+          <button class="chip" data-say="最近总是很焦虑，晚上睡不着。">最近很焦虑</button>
+          <button class="chip" data-say="有个机会，但我怕做不好，要不要接？">该不该冒险</button>
+          <button class="chip" data-say="跟家里人吵了一架，现在很难受。">和家人吵架</button>
+          <button class="chip" data-say="我不知道自己到底想要什么。">不知道自己想要什么</button>
+        </div>
+
+        <div class="chat-input">
+          <textarea id="chatInput" rows="1" placeholder="说说看，此刻心里最吵的是哪一句。"></textarea>
+          <button class="send" id="sendBtn" aria-label="发送">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 12h15M13 6l7 6-7 6"/></svg>
+          </button>
+        </div>
+        <p class="chan-note">师父是机器做的，说的话只当一面镜子，不作诊断，也不替你做决定。若你正处在撑不住的时刻，请拨全国心理援助热线 12356——那里有真人。</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <span class="seal-mark" aria-hidden="true">念</span>
+        <div>
+          <div class="n">一念 · 线上 AI 寺庙</div>
+          <div class="s">香火不熄，心事有解</div>
+        </div>
+      </div>
+      <p class="foot-txt">本站是给心找个地方坐一坐的小工具，不是宗教场所，也不模仿任何宗教仪轨。签文为拟古之作，解读出自程序；不提供医疗、心理诊断、法律与投资建议。所有愿望、功德与对话默认只存在你自己的浏览器中。愿你所求皆有回应，若无回应，也愿你能安睡。</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 设置面板 ===== -->
+<div class="sheet-mask" id="sheetMask" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet">
+    <button class="close" id="sheetClose" aria-label="关闭">×</button>
+    <h3 id="sheetTitle">接入 AI</h3>
+    <p class="sd">不接也能用：签文、解语、禅语都是内置的。接上之后，解签与问禅会由模型现写，更贴你的事。</p>
+
+    <div class="seg" id="modeSeg">
+      <button data-mode="local" class="on">本地禅语</button>
+      <button data-mode="ai">接入大模型</button>
+    </div>
+
+    <div class="sheet-fields hide" id="aiFields">
+      <div class="field">
+        <span class="label">服务商</span>
+        <div class="preset" id="presetRow">
+          <button data-p="ark">豆包 · 方舟</button>
+          <button data-p="deepseek">DeepSeek</button>
+          <button data-p="openai">OpenAI</button>
+          <button data-p="custom">自定义</button>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="baseUrl">接口地址（OpenAI 兼容 /chat/completions）</label>
+        <input class="hair-input" id="baseUrl" placeholder="https://ark.cn-beijing.volces.com/api/v3">
+      </div>
+      <div class="field">
+        <label class="label" for="modelName">模型 / 推理接入点 ID</label>
+        <input class="hair-input" id="modelName" placeholder="如 deepseek-chat 或 ep-2024xxxx">
+      </div>
+      <div class="field">
+        <label class="label" for="apiKey">API Key</label>
+        <input class="hair-input" id="apiKey" type="password" placeholder="只存在这台设备，直接发往服务商" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="sheet-actions">
+      <button class="btn btn-solid" id="saveCfg">保存</button>
+      <button class="btn btn-ghost" id="testCfg">测试连接</button>
+      <span class="sheet-msg" id="sheetMsg"></span>
+    </div>
+    <p class="small-note">这是纯静态站点，没有服务器替你保管密钥：Key 存在本机 localStorage，请求由浏览器直接发往你填的接口，不经过本站。共用电脑请勿保存。若不想填 Key，就留在本地模式，一样能求签、解签、说话。</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/data.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
